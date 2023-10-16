@@ -10,12 +10,14 @@ function Posts() {
   const posts = useAppSelector(selectPosts);
   const status = useAppSelector(selectStatus)
   const dispatch = useAppDispatch();
+  
 
   const [postToEdit, setPostToEdit] = useState(0);
 
   useEffect(() => {
     dispatch(fetchPostsAsync());
   }, [dispatch])
+  
 
   function toggleEditForm(post_id?:number) {
       if (postToEdit === post_id) {
@@ -29,9 +31,11 @@ function Posts() {
       dispatch(updatePostAsync(formData));
       toggleEditForm();
   }
+  
 
   let contents;
   let table = new DataTable('#myTable');
+
 
   if (status !== Statuses.UpToDate) {
     contents = <div>{status}</div>
