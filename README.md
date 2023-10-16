@@ -46,4 +46,4 @@ Esto lo haremos en 2 consolas distintas
 
 ### Finalmente probamos la aplicación en nuestro navegador:
 
-> http://127.0.0.0:3000 
+> http://127.0.0.1:3000 
